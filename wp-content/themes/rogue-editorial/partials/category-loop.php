@@ -70,7 +70,7 @@ $posts_query = new WP_Query( array(
 					<?php if ( has_post_thumbnail() ) : ?>
 						<?php the_post_thumbnail( 'large' ); ?>
 					<?php else : ?>
-						<div class="vk-thumb-placeholder"><span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span></div>
+						<img class="vk-thumb-fallback vk-thumb-fallback--featured" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/fallback.jpg' ); ?>" alt="" loading="lazy" />
 					<?php endif; ?>
 				</a>
 				<div class="vk-card__body">

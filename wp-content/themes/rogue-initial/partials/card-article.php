@@ -20,9 +20,7 @@ $first_cat  = ! empty( $categories ) && ! is_wp_error( $categories ) ? $categori
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'medium_large' ); ?>
 		<?php else : ?>
-			<div style="width:100%;aspect-ratio:16/10;background:var(--vk-grad);display:grid;place-items:center;color:#fff;font-family:Poppins,sans-serif;font-weight:800;">
-				<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
-			</div>
+			<img class="vk-thumb-fallback" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/fallback.jpg' ); ?>" alt="" loading="lazy" />
 		<?php endif; ?>
 	</a>
 	<div class="vk-card__body">

@@ -204,18 +204,15 @@ if ( $oceanwp_related_query->have_posts() ) :
 
 						</figure>
 
-					<?php else : ?>
+				<?php else : ?>
 
-						<!-- Placeholder for posts without a featured image -->
-						<figure class="related-post-media clr related-post-media--placeholder">
-							<a href="<?php the_permalink(); ?>" class="related-thumb">
-								<div class="vk-related-placeholder">
-									<span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
-								</div>
-							</a>
-						</figure>
+					<figure class="related-post-media clr">
+						<a href="<?php the_permalink(); ?>" class="related-thumb">
+							<img class="vk-thumb-fallback" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/fallback.jpg' ); ?>" alt="" loading="lazy" />
+						</a>
+					</figure>
 
-					<?php endif; ?>
+				<?php endif; ?>
 
 					<h3 class="related-post-title">
 						<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>

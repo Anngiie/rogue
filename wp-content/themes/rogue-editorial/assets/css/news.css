@@ -715,6 +715,24 @@ img { max-width: 100%; height: auto; }
 .vk-thumb-placeholder--hero span { font-size: 30px; color: rgba(255, 255, 255, 0.4); }
 .vk-hero__thumb .vk-thumb-placeholder--hero { background: #24201a; }
 
+/* Fallback image */
+.vk-thumb-fallback {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.vk-thumb-fallback--hero { height: 100%; }
+.vk-thumb-fallback--featured { object-position: center 30%; }
+.vk-thumb-fallback--thumb {
+	min-width: 120px;
+	aspect-ratio: 1 / 1;
+	border-radius: var(--vk-radius);
+}
+#related-posts .related-thumb .vk-thumb-fallback {
+	border-radius: var(--vk-radius);
+}
+
 /* ---------- Archive ---------- */
 .vk-archive-hero {
 	background: var(--vk-mist);
@@ -1277,7 +1295,9 @@ img { max-width: 100%; height: auto; }
 	text-transform: uppercase;
 	color: var(--vk-muted);
 }
-#related-posts .related-thumb { border-radius: var(--vk-radius); overflow: hidden; display: block; }
+#related-posts .related-thumb { border-radius: var(--vk-radius); overflow: hidden; display: block; aspect-ratio: 16 / 10; }
+#related-posts .related-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#related-posts .related-post-media { margin: 0 0 12px; }
 
 .related-post-media--placeholder .vk-related-placeholder {
 	width: 100%;
