@@ -8,7 +8,7 @@ Both are child themes of [OceanWP](https://oceanwp.org/). Only one can be active
 
 | Initial | Editorial |
 | --- | --- |
-| ![Rogue Initial](screenshots/initial.png) | ![Rogue Editorial](screenshots/editorial.png) |
+| ![Rogue Initial](screenshots/RØGUE0.png) | ![Rogue Editorial](screenshots/RØGUE1.png) |
 
 **Rogue - Initial** (`wp-content/themes/rogue-initial`)
 
