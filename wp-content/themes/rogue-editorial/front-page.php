@@ -92,7 +92,7 @@ $news_categories = array(
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail( 'large' ); ?>
 						<?php else : ?>
-							<div class="vk-thumb-placeholder vk-thumb-placeholder--hero"><span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span></div>
+							<img class="vk-thumb-fallback vk-thumb-fallback--hero" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/fallback.jpg' ); ?>" alt="" loading="lazy" />
 						<?php endif; ?>
 						<?php if ( $first_cat ) : ?>
 							<span class="vk-cat-badge"><?php echo esc_html( $first_cat->name ); ?></span>

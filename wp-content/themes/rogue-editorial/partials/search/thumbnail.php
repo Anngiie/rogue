@@ -23,9 +23,7 @@ if ( function_exists( 'oceanwp_get_schema_markup' ) && oceanwp_get_schema_markup
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'thumbnail', $img_args ); ?>
 		<?php else : ?>
-			<div class="vk-search-thumb-placeholder">
-				<span><?php echo esc_html( mb_substr( get_the_title(), 0, 1 ) ); ?></span>
-			</div>
+			<img class="vk-thumb-fallback vk-thumb-fallback--thumb" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/fallback.jpg' ); ?>" alt="" loading="lazy" />
 		<?php endif; ?>
 	</a>
 </div><!-- .thumbnail -->
